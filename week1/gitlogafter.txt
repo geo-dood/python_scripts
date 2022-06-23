@@ -1,0 +1,5 @@
+commit 120d49d1160ffc3122354d3c632c0b6466f81ed7
+Author: George Maysack-Schlueter <gdmaysack@madisoncollege.edu>
+Date:   Wed Jun 22 22:21:35 2022 -0500
+
+    Initial commit of GitHub exercise

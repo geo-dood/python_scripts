@@ -1,0 +1,23 @@
+commit 0b0ab7947e4ae93f09377e9054c03600a68b8cba
+Author: George D. Maysack-Schlueter <gdmaysack@madisoncollege.edu>
+Date:   Wed Jun 22 23:40:30 2022 -0500
+
+    Added a new file
+
+commit 87c5f3e2054e73f267e102914e8923b84151e1d2
+Author: George D. Maysack-Schlueter <gdmaysack@madisoncollege.edu>
+Date:   Wed Jun 22 23:31:08 2022 -0500
+
+    Initial Commit for Python Class.
+
+commit 72885463385d00bca9c78e0ac6fe5c3e70977631
+Author: George Maysack-Schlueter <gdmaysack@madisoncollege.edu>
+Date:   Wed Jun 22 23:04:40 2022 -0500
+
+    initial commit of Github exercise
+
+commit 120d49d1160ffc3122354d3c632c0b6466f81ed7
+Author: George Maysack-Schlueter <gdmaysack@madisoncollege.edu>
+Date:   Wed Jun 22 22:21:35 2022 -0500
+
+    Initial commit of GitHub exercise
