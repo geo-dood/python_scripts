@@ -25,3 +25,10 @@ print()
 etcPass.close() 
 
 # Utilizing "with open" method so we can use a loop to save the contents line by line to our variable
+count = 0
+with open("/etc/passwd", "r") as etcPassLines:
+    line = etcPassLines.read(10)
+    while line:
+        count += 1
+        line = etcPassLines.readline()
+        
