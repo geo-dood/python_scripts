@@ -6,7 +6,6 @@
 
 
 #importing time module so I can utilize the time.sleep() function to allow for for some dramatic pauses/reading time
-import re
 import time
 
 # Introduction sequence, giving user chance to enter their name, then name their ship
@@ -23,7 +22,7 @@ while True:
         break
             
 # Asking the user to enter the name of their ship. To help with potentially broken dialogue, I added an if/else statement to ensure the ship name is always preceded with "The"
-time.sleep(2.5) 
+time.sleep(2) 
 ship = input("What is the name of your ship? Make it a good one!--> ")
 # Here, we are checking if the ship name starts with the word "The". If it does, we move on. If it does not, we append it to the beginning of the name to ensure proper dialogue. 
 if not ship.startswith("The" or "THE" or "the"):
@@ -33,15 +32,11 @@ else:
 
 # A little bit of dialogue between the prompt and the user, leading into the first decision branch.
 print(f"Ah, yes, {ship}! How could I have forgotten. A gorgeous vessel indeed...")
-time.sleep(2.5) 
+time.sleep(1.5) 
 print("Albeit a bit dirty...",)
-time.sleep(2)
-print("and smelly.")
-print("...")
-time.sleep(3)
-print("...")
-time.sleep(3)
+time.sleep(1.5)
 print(f"Anyway, I am your trusty AI companion!\nI'm here to help guide {ship} and its wonderful Captain {name} through the galaxy!")
+time.sleep(1.5)
 print(f"As our first order of buisness Captain {name}, we must go get {ship} cleaned.")
 time.sleep(2)
 print("")
@@ -84,12 +79,12 @@ if pathChoice == ("2"):
         if deepVoid == ("1"):
             print(f"Uh oh. You decided to follow your head, and it lead you directly into a hostile aliens dinner party. He was not happy. You got vaporized, and you are dead.")
             exit()
-    # Deep void success (heart)
+    # Deep void success (heart) - allows you to move on to the ship wash
         elif deepVoid == ("2"):
             print(f"Awesome job Captain {name}. Always best to follow your heart. Now Lets go wash this ship a well deserved wash!")
             time.sleep(3)
-        # Ship Wash Ending'
-        print("You Make your way to the shipwash, would you like to use 1)Lemon, or 2)New Ship Scent?")
+        # Ship Wash Ending - allows you to choose your ships scent
+        print("You Make your way to the shipwash after a long, hard day of space exploration, would you like to use 1)Lemon, or 2)New Ship Scent?")
         scent = input("--> " )
         if scent == ("1"):
             print(f"You chose the lemon scent. You always loved the clean, refreshing smell of lemons")
@@ -97,18 +92,14 @@ if pathChoice == ("2"):
         elif scent == ("2"):
             print(f"You chose new ship smell. You're not fooling anyone, but you do love the smell!")
             exit()
-            
-                    # Ship Wash Ending'
-        print("You Make your way to the shipwash, would you like to use Lemon, or New Ship Scent?")
-    # Self Destruct Path
+    # Self Destruct Path - Leads to instant death, then exits the game
 if pathChoice == "3":
     print("You weren't supossed to press that button...")
     time.sleep(3)
     print("Why would you press that button?!?")
     time.sleep(2)
     print(f"Oh well, goodbye Captain {name}")
+    time.sleep(2)
+    print("*KABOOM*")
+    print("You died via self destruction. So much for a ship wash.")
     exit()
-    
-
-
-
