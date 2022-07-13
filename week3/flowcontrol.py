@@ -11,6 +11,7 @@ import time
 # Introduction sequence, giving user chance to enter their name, then name their ship
 print("Hello Astral Traveler!")
 time.sleep(2)
+
 # Using a while loop to ensure only letters are entered as the users name. Prompt will continually ask for alphabetical input, until it is honored.
 while True:
     name = input("What is your name?--> ")
@@ -43,23 +44,22 @@ print("")
 print("Would you like to head through the astroid field, or the deep void?")
 print("Please enter your choice on the keypad: 1) Astroid Field 2) Deep Void or 3) Self Destruct" )
 pathChoice = input("--> " )
+
 # Astroid Field Path
 if pathChoice == "1":
     print(f"This astroid field is much denser than expected... {ship} is really taking a beating! Should we go left or right?")
     print("1)Left? or 2)Right?")
-
-# Astroid Field Logic    
-# Astroid Death Ending (right)
+    # Astroid Death Ending (right) - gets us clobbered by an asroid - ends the game, and exits
     while True:
         astroidField = input("--> " )
         if astroidField == ("1"):
             print(f"Uh oh. You turned directly into a massive astroid that ripped the hull of {ship} apart. Captain {name} was sucked into the vacuum of space. You are dead.")
             exit()
-    # Astroid Success (left)
+        # Astroid Success (left) allows us to dodge the astroids and move onto the ship wash ending
         elif astroidField == ("2"):
             print(f"Awesome. Good choice. {ship} will live to see another day. Lets get to that shipwash!")
             time.sleep(3)
-        # Ship Wash Ending'
+        # Ship Wash Ending- Allows you to choose your ships scent
         print("You Make your way to the shipwash, would you like to use 1)Lemon, or 2)New Ship Scent?")
         scent = input("--> " )
         if scent == ("1"):
@@ -68,7 +68,7 @@ if pathChoice == "1":
         elif scent == ("2"):
             print(f"You chose new ship smell. You're not fooling anyone, but you do love the smell!")
             exit()
-    # Deep Void Path
+# Deep Void Path
 if pathChoice == ("2"):
     print(f"This void is much darker than expected... {ship}'s navigation systems can't tell up from down! Should we follow our head or our heart?")
     print("1)Head? or 2)Heart?")
@@ -79,7 +79,7 @@ if pathChoice == ("2"):
         if deepVoid == ("1"):
             print(f"Uh oh. You decided to follow your head, and it lead you directly into a hostile aliens dinner party. He was not happy. You got vaporized, and you are dead.")
             exit()
-    # Deep void success (heart) - allows you to move on to the ship wash
+        # Deep void success (heart) - allows you to move on to the ship wash
         elif deepVoid == ("2"):
             print(f"Awesome job Captain {name}. Always best to follow your heart. Now Lets go wash this ship a well deserved wash!")
             time.sleep(3)
@@ -92,7 +92,7 @@ if pathChoice == ("2"):
         elif scent == ("2"):
             print(f"You chose new ship smell. You're not fooling anyone, but you do love the smell!")
             exit()
-    # Self Destruct Path - Leads to instant death, then exits the game
+# Self Destruct Path - Leads to instant death, then exits the game
 if pathChoice == "3":
     print("You weren't supossed to press that button...")
     time.sleep(3)
