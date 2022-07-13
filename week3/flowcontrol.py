@@ -6,7 +6,7 @@
 
 
 #importing time module so I can utilize the time.sleep() function to allow for for some dramatic pauses/reading time
-from re import L
+import re
 import time
 
 # Introduction sequence, giving user chance to enter their name, then name their ship
@@ -42,51 +42,73 @@ time.sleep(3)
 print("...")
 time.sleep(3)
 print(f"Anyway, I am your trusty AI companion!\nI'm here to help guide {ship} and its wonderful Captain {name} through the galaxy!")
-time.sleep(3)
 print(f"As our first order of buisness Captain {name}, we must go get {ship} cleaned.")
 time.sleep(2)
+print("")
 print("Would you like to head through the astroid field, or the deep void?")
 print("Please enter your choice on the keypad: 1) Astroid Field 2) Deep Void or 3) Self Destruct" )
-path = input("--> " )
-#Blast off
-    time.sleep(3)
-    print(f"Blast off and arrival in 3...\r")
-    time.sleep(2)
-    print("2...")
-    time.sleep(2)
-    print("1...")
-    time.sleep(1)
-    print("Oh, look at that, we're already here.")
-
+pathChoice = input("--> " )
 # Astroid Field Path
-if path == "1":
-
+if pathChoice == "1":
     print(f"This astroid field is much denser than expected... {ship} is really taking a beating! Should we go left or right?")
-    print("Left?(L) or Right?(R)/r")
+    print("1)Left? or 2)Right?")
+
 # Astroid Field Logic    
-    # Astroid Death Ending (right)
+# Astroid Death Ending (right)
     while True:
         astroidField = input("--> " )
-        if not astroidField == ("l" or "L" or "r" or "R"):
-            print(f"Please make a valid decision. We're in an astroid field here. Help us Captain {name}, you're our only hope!")
-            continue
-        if astroidField == ("r" or "R"):
+        if astroidField == ("1"):
             print(f"Uh oh. You turned directly into a massive astroid that ripped the hull of {ship} apart. Captain {name} was sucked into the vacuum of space. You are dead.")
+            exit()
     # Astroid Success (left)
-        if astroidField == ("l" or "L"):
+        elif astroidField == ("2"):
             print(f"Awesome. Good choice. {ship} will live to see another day. Lets get to that shipwash!")
-            break
-  
-
-# Deep Void Path
-
-# Alien Death Ending
-
-# Space Pirate Raid Ending (Random)
-
-# Self Destruct Path
-
-# Ship Wash Ending
+            time.sleep(3)
+        # Ship Wash Ending'
+        print("You Make your way to the shipwash, would you like to use 1)Lemon, or 2)New Ship Scent?")
+        scent = input("--> " )
+        if scent == ("1"):
+            print(f"You chose the lemon scent. You always loved the clean, refreshing smell of lemons")
+            exit()
+        elif scent == ("2"):
+            print(f"You chose new ship smell. You're not fooling anyone, but you do love the smell!")
+            exit()
+    # Deep Void Path
+if pathChoice == ("2"):
+    print(f"This void is much darker than expected... {ship}'s navigation systems can't tell up from down! Should we follow our head or our heart?")
+    print("1)Head? or 2)Heart?")
+        #deep void logic
+    while True:
+        deepVoid = input("--> " )
+        #deep void death (head)
+        if deepVoid == ("1"):
+            print(f"Uh oh. You decided to follow your head, and it lead you directly into a hostile aliens dinner party. He was not happy. You got vaporized, and you are dead.")
+            exit()
+    # Deep void success (heart)
+        elif deepVoid == ("2"):
+            print(f"Awesome job Captain {name}. Always best to follow your heart. Now Lets go wash this ship a well deserved wash!")
+            time.sleep(3)
+        # Ship Wash Ending'
+        print("You Make your way to the shipwash, would you like to use 1)Lemon, or 2)New Ship Scent?")
+        scent = input("--> " )
+        if scent == ("1"):
+            print(f"You chose the lemon scent. You always loved the clean, refreshing smell of lemons")
+            exit()
+        elif scent == ("2"):
+            print(f"You chose new ship smell. You're not fooling anyone, but you do love the smell!")
+            exit()
+            
+                    # Ship Wash Ending'
+        print("You Make your way to the shipwash, would you like to use Lemon, or New Ship Scent?")
+    # Self Destruct Path
+if pathChoice == "3":
+    print("You weren't supossed to press that button...")
+    time.sleep(3)
+    print("Why would you press that button?!?")
+    time.sleep(2)
+    print(f"Oh well, goodbye Captain {name}")
+    exit()
+    
 
 
 
