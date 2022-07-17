@@ -5,7 +5,7 @@
 
 # Per step 2, I am printing out my first and last name to the screen. 
 print("Name: George Maysack-Schlueter")
-
+print("")
 # Setting up variable to keep track of line number sum, one to actually move the for loop forward, and a list of strings of the keywords we are searching for.
 Total = 0
 count = 0
@@ -16,6 +16,7 @@ with open("/home/student/Documents/scripts-geo-dood/week4/midterm/Midterm-if.txt
     for line in midtermif:
         count += 1
         # for our words in our list, if they are found in the current line, the count number is added to our Total, otherwise, we add nothing to the total. 
+        # we subtract 1 from the count, because our text editors start on line 1, but we start on 0. 
         for word in words:
             if word in line:
                 Total += count - 1
