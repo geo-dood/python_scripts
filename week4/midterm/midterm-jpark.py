@@ -55,6 +55,3 @@ while testing:
     # Once the counter is greater than 3, any subsequent attempts to log in with improper credentials will trigger a visible count, with the same message. 
     if counter > 3:
         print(f"You didn't say the magic word {counter} times!")
-
-
-
