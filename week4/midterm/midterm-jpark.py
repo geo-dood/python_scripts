@@ -4,7 +4,7 @@
 # Description: This is a script for week 4 of python scripting class. This is for the midterm project " A python in jurrasic park" section. 
 
 print("George Maysack-Schlueter")
-
+print("")
 # setting up password database dictionary as per step 2 
 password_database = {"Username":"dnedry","Password":"please"}
 
