@@ -1,7 +1,7 @@
 #!/user/bin/env python3
 
 # Author: George Maysack-schlueter 
-# Description: Script for week 5 in python scripting class. This script is for the first script in the functions lab ' Convert Fahrenheit to Celsious'
+# Description: Script for week 5 in python scripting class. This script is for the first script in the functions lab ' Convert Fahrenheit to Celsius'
 
 def convert_temp(degrees_fahrenheit):
     degrees_celsius = (degrees_fahrenheit - 32) * 5/9
