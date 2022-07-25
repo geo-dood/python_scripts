@@ -5,6 +5,5 @@
 
 import f2c
 
-user_input = input("Enter Degrees in Fahrenheit to be Converted to Celsius: ")
-
+user_input = int(input("Enter Degrees in Fahrenheit to be Converted to Celsius: "))
 print(f2c.convert_temp(user_input))
