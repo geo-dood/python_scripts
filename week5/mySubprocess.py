@@ -6,6 +6,11 @@ import subprocess
 # Description: This is a script for week 5 of python scripting class. This particular script is to practice concepts we learned regarding subprocesses
 
 myProc = subprocess.run(['ps', '-axco', 'command'],stdout=subprocess.PIPE)
-myProcString = myProc.stdout.decode().split('\n')
+myProcString = myProc.stdout.decode()
+myProcList = myProcString.split('\n')[1:]
 
-print(myProcString)
+for process in myProcList:
+    if "" in process:
+        print(process)
+
+print(len(myProcList))
