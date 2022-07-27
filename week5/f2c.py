@@ -1,4 +1,4 @@
-#!/user/bin/env python3
+#!/usr/bin/env python3
 
 # Author: George Maysack-schlueter 
 # Description: Script for week 5 in python scripting class. This script is for the first script in the functions lab ' Convert Fahrenheit to Celsius'
