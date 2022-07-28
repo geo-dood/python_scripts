@@ -5,14 +5,11 @@
 #***THIS IS THE CHAT SERVER***
 
 import socket
+import time
 
-headerSize = 20
-
-# Empty quotes means listen on all available interfaces
+headerSize = 10
 localHost = '127.0.0.1'
-# Arbitrary non-privileged port to listen on             	
-localPort = 1234
-RCV_DATA = ""         	
+localPort = 60602
 
 serverStream = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serverStream.bind((localHost, localPort))
@@ -22,8 +19,13 @@ while True:
     clientsocket, address = serverStream.accept()
     print(f'Connection from {address} has been established')
 
-    message = "Welcome to the Chat Room!"
-    message = f'{len(message):<{headerSize}]}' + message
+    banner = "Please Enter a Message!"
+    banner = f'{len(banner):<{headerSize}}' + banner
 
-    clientsocket.send(bytes(message, "utf-8"))
-    clientsocket.close()
+    clientsocket.send(bytes(banner, "utf-8"))
+
+    while True:
+        time.sleep(3)
+        banner = "Please Enter a Message!"
+        banner = f'{len(banner):<{headerSize}}' + banner
+        clientsocket.send(bytes(banner, "utf-8"))
