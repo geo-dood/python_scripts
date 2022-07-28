@@ -6,30 +6,18 @@
 
 import socket
 
-headerSize = 10
-remoteHost = '127.0.0.1'
-remotePort = 60602
+RHOST    = '127.0.0.1' # The target IP address, retrieved by FQDN
+RPORT    = 5000 # The target port as used by the server
+SND_DATA = '' 
+RCV_DATA = ''
 
-clientSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-clientSocket.connect((remoteHost, remotePort))
+C_SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+C_SOCK.connect((RHOST, RPORT))
 
-while True:
+#Put the pattern you want to send here.
+C_SOCK.send(bytearray(SND_DATA, "utf-8")) 
 
-    fullMessage = ''
-    newMessage = True
-    while True:
-        receivedMessage = clientSocket.recv(16)
-        if newMessage:
-            print(f"New Message Length: {receivedMessage[:headerSize]}")
-            messageLength = int(receivedMessage[:headerSize])
-            newMessage = False
+RCV_DATA = C_SOCK.recv(1024)
+print(RCV_DATA.decode())
 
-        fullMessage += receivedMessage.decode("utf-8")
-
-        if len(fullMessage)-headerSize == messageLength:
-            print("full message received")
-            print(fullMessage[headerSize:])
-            newMessage = True
-            fullMessage = ''
-            
-        print(fullMessage)
+C_SOCK.close()

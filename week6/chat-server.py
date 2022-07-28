@@ -5,27 +5,26 @@
 #***THIS IS THE CHAT SERVER***
 
 import socket
-import time
 
-headerSize = 10
-localHost = '127.0.0.1'
-localPort = 60602
+# Empty quotes means listen on all available interfaces
+LHOST = ''
+# Arbitrary non-privileged port to listen on             	
+LPORT = 5000
+RCV_DATA = ""         	
 
-serverStream = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serverStream.bind((localHost, localPort))
-serverStream.listen(5)
+L_SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+L_SOCK.bind((LHOST, LPORT))
 
-while True:
-    clientsocket, address = serverStream.accept()
-    print(f'Connection from {address} has been established')
+while(1):
+    L_SOCK.listen(1)
+    L_CONN, addr = L_SOCK.accept()
+    print('Connected by', addr)
+    while 1:
+        RCV_DATA = L_CONN.recv(1024)
+        if not RCV_DATA: break
+        print(f"The server received this data:{RCV_DATA}")
+        # This line sends the data back to the client
+        L_CONN.sendall(RCV_DATA)
 
-    banner = "Please Enter a Message!"
-    banner = f'{len(banner):<{headerSize}}' + banner
+    L_CONN.close()
 
-    clientsocket.send(bytes(banner, "utf-8"))
-
-    while True:
-        time.sleep(3)
-        banner = "Please Enter a Message!"
-        banner = f'{len(banner):<{headerSize}}' + banner
-        clientsocket.send(bytes(banner, "utf-8"))
