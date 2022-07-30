@@ -7,8 +7,8 @@
 import socket
 
 # Local host
-LHOST = ''
-LPORT = 50000
+LHOST = '127.0.0.1'
+LPORT = 5001
 # Creating received data variable that will be 'listening' for the user input
 RCV_DATA = ""
 
@@ -19,11 +19,12 @@ L_SOCK.bind((LHOST, LPORT))
 while 1:
     L_SOCK.listen(1)
     L_CONN, addr = L_SOCK.accept()
-    print('Connected by', addr)
-    RCV_DATA = L_SOCK.recv(1024)
-    if not RCV_DATA:
-        break
-    print(f"The server received the following: {RCV_DATA}")
-    # This line sends the data back to the client
-    L_SOCK.sendall(RCV_DATA)
-L_CONN.close()
+    print('Connected by: ', addr)
+    while 1:
+        RCV_DATA = L_CONN.recv(4096)
+        if not RCV_DATA:
+            break
+        print(f"The server received the following: {RCV_DATA}")
+        # This line sends the data back to the client
+        L_CONN.sendall(RCV_DATA)
+    L_CONN.close()
