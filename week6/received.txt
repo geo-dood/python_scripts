@@ -1,0 +1,9 @@
+Hello world
+
+This is a text file that is to be transferred
+
+Please send me from the file transfer client
+
+to the file transfer server!
+
+Thanks!
