@@ -13,4 +13,4 @@ response = requests.get("https://notpurple.com")
 with open("my_web_file.html", "w") as hFile:
     hFile.write(response.text)
 
-print("Copy page to file complete! Check file 'my_web_file.html for results. Something about t-shirts?")
+print("Copy page to file complete! Check file 'my_web_file.html for results.")
