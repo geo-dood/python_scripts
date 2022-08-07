@@ -4,7 +4,22 @@
 # Description: This is a script for week 7 of python scripting class. This is for the JSON Lab.
 
 # Importing our required modules
-import requests, json, argparse, sys
+import requests, json, argparse, sys, re
+import re
+
+# Make a regular expression
+# for validating an Ip-address
+regex = "^((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])$"
+
+# Define a function for
+# validate an Ip address
+def check(Ip):
+	# pass the regular expression
+	# and the string in search() method
+	if(re.search(regex, Ip)):
+		print("Valid Ip address")
+	else:
+		print("Invalid Ip address")
 
 # setting up a parser with a single argument so we can get a user to input an ip address
 myParser = argparse.ArgumentParser(description='IP Address Lookup Tool')
