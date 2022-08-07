@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-#Author: George Maysack-Schlueter
-#Description: This is a script for week 6 of python scripting class. This script is for the Networking sockets lab
-#***THIS IS THE FILE TRANSFER SERVER***
+# Author: George Maysack-Schlueter
+# Description: This is a script for week 6 of python scripting class. This script is for the Networking sockets lab
+# ***THIS IS THE FILE TRANSFER SERVER***
 
 import socket
 
@@ -13,7 +13,6 @@ LPORT = 5001
 # Initializing connection with the chat client using IPv4 and TCP
 L_SOCK = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 L_SOCK.bind((LHOST, LPORT))
-
 
 L_SOCK.listen(1)
 
