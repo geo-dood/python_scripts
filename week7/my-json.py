@@ -6,9 +6,6 @@
 # Importing our required modules
 import requests, json, argparse, sys
 
-def valid_IP_address:
-    try:
-        return ip
 # setting up a parser with a single argument so we can get a user to input an ip address
 myParser = argparse.ArgumentParser(description='IP Address Lookup Tool')
 
