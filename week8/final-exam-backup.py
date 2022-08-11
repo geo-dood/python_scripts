@@ -4,7 +4,7 @@
 # Description: This is the final exam script for python scripting class. 
 
 # Importing our required modules. 
-import argparse, requests, bs4
+import argparse, requests, bs4, json
 
 
 # *****PARSER*****
@@ -63,8 +63,22 @@ if functionNumber == 2:
 
 
 # Function 3 - parse_header
-#if functionNumber == 4:
+if functionNumber == 3:
+    # creating parse_header function which is a simple requests.get to our URL.
+    parse_header = requests.get(URL)
+    # Then, we are printing a formatted string grabbing only the headers from our parse_headers variable, and then only the 'FINAL HEADER' header entry. 
+    print(f"Answer: {parse_header.headers['FINAL-HEADER']}")
+    
 
+# Function 4 - parse_json
+if functionNumber == 4:
+    parse_json = requests.get(URL)
+    json_dict = json.loads(parse_json.text)
+
+    for key in json_dict:
+        theShining = json.dumps(json_dict["Music And Books"][3])
+        print(f"ANSWER: {theShining[61:65]}")
 
 # Function 5 - socket_client
-#if functionNumber == 5:
+if functionNumber == 5:
+    socket_client = True
