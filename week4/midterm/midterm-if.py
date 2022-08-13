@@ -12,7 +12,7 @@ count = 0
 words = ["gmeach18@ed.gov", "248.253.63.149", "Whiteland", "80.222.19.190", "Kayley", "dcassyqw@microsoft.com"]
 # Opening our file in read only mode as midtermif
 with open("/home/student/Documents/scripts-geo-dood/week4/midterm/Midterm-if.txt", "r") as midtermif:
-    #for each line in midtermif, we are adding 1 to our count, which will keep track of the line number
+    # for each line in midtermif, we are adding 1 to our count, which will keep track of the line number
     for line in midtermif:
         count += 1
         # for our words in our list, if they are found in the current line, the count number is added to our Total, otherwise, we add nothing to the total. 
@@ -21,8 +21,8 @@ with open("/home/student/Documents/scripts-geo-dood/week4/midterm/Midterm-if.txt
             if word in line:
                 Total += count - 1
             else:
-                Total + 0
+                var = Total + 0
 # ensuring we close our midtermif file
 midtermif.close()
-#Printing our total to the screen, which is the sum of the line numbers we found our keywords on
+# Printing our total to the screen, which is the sum of the line numbers we found our keywords on
 print(f"The total is: {Total}")

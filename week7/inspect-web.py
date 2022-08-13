@@ -8,7 +8,7 @@ import bs4
 import requests
 
 # Initiating our request to the desired domain
-res = requests.get('http://notpurple.com')
+res = requests.get('https://notpurple.com')
 res.raise_for_status()
 
 # Creating our variable to store the response as text and to use the HTML parser

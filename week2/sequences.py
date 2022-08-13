@@ -6,8 +6,7 @@
 
 # Variable Library - Sourced from step 1 in the lab
 varString = "Here is a nice string to slice"
-varList = [ "Here", "is", "a", "nice", "list", "to", "slice" ]
-
+varList = ["Here", "is", "a", "nice", "list", "to", "slice"]
 
 # Using slicing on varString to recreate output from step 2
 print(varString[3::1])
@@ -22,7 +21,6 @@ print(varList[2::-1])
 print(varList[2:4:1])
 print(varList[0::3])
 print(varList[1::1])
-
 
 # For loop to print each element of varString one line at a time (step 4)
 for element in varString:

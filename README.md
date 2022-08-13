@@ -1,4 +1,1 @@
-George Maysack-Schlueter
-ReadMe file for Python Scripting Class repo
-Testing out Git/GitHub
-Going to push this README file to github
+This is a repository of all of my past and current Python scripts.

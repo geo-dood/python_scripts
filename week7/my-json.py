@@ -28,7 +28,7 @@ if len(sys.argv) == 1:
     myParser.print_help()
 # Otherwise, we are going to initiate our json request to the IP info API, and get the required key/value pair printed
 else:
-    jsonRequest = requests.get(f"http://ipinfo.io/{searchAddress}/json")
+    jsonRequest = requests.get(f"https://ipinfo.io/{searchAddress}/json")
     myDict = json.loads(jsonRequest.text)
     for key in myDict:
         print(f"{key} : {myDict[key]}")
