@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 # Author: George Maysack-Schlueter
-# Description: A script applying concepts related to string formatting. I'll be recreating the example output given in the Lab document as per the rules.
+# Description: A script applying concepts related to string formatting. I'll be recreating the example output given in
+# the Lab document as per the rules.
 
 
 # Variable Library - Defined variables exactly as written in assignment

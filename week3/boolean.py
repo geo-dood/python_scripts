@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # Author: George Maysack-Schlueter
-# Description: This script is for the Boolean Logic Basics Labs from week 3. We are testing the output of the booleans provided in the lab document
+# Description: This script is for the Boolean Logic Basics Labs from week 3. We are testing the output of the booleans
+# provided in the lab document
 
 # Printing the results from the 19 provided boolean expressions. 
 print(True and True)

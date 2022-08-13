@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 # Author: George Maysack-Schlueter
-# Description: Python script to apply some concepts learned in week 2, specifically regarding different Data types, string slicing, and for loops
+# Description: Python script to apply some concepts learned in week 2, specifically regarding different Data types,
+# string slicing, and for loops
 
 
 # Variable Library - Sourced from step 1 in the lab
